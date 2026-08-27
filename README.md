@@ -1,8 +1,8 @@
-🌐 AI Language Translator
+# 🌐 AI Language Translator
 
 An AI-powered language translation application developed using Python and Tkinter. The application allows users to translate text between multiple languages and also provides voice input, text-to-speech, translation history, copy, and language swap features.
 
-📌 Project Overview
+## 📌 Project Overview
 
 The AI Language Translator is a desktop-based translation application that provides real-time text translation between multiple languages.
 
@@ -10,7 +10,7 @@ The application uses an online translation service to translate the entered text
 
 Translation history is automatically stored locally in a JSON file so previous translations can be accessed easily.
 
-✨ Features
+## ✨ Features
 
 - 🌐 Translate text between multiple languages
 - 🔄 Swap source and target languages
@@ -25,7 +25,7 @@ Translation history is automatically stored locally in a JSON file so previous t
 - 🖥️ User-friendly Tkinter graphical interface
 - 📝 Supports up to 5000 characters per translation
 
-🛠️ Technologies Used
+## 🛠️ Technologies Used
 
 - Python
 - Tkinter – Graphical User Interface
@@ -38,7 +38,7 @@ Translation history is automatically stored locally in a JSON file so previous t
 - JSON – Storing translation history
 - Threading – Running translation in the background
 
-📂 Project Structure
+## 📂 Project Structure
 
 AI-Language-Translator/
 │
@@ -48,7 +48,7 @@ AI-Language-Translator/
 │
 └── README.md
 
-📄 File Description
+## 📄 File Description
 
 app.py
 Main Python application containing the GUI, translation system, voice input, text-to-speech, language selection, history, and other features.
@@ -59,7 +59,7 @@ Stores the user's previous translation history.
 README.md
 Contains information about the project, features, technologies, and project structure.
 
-🚀 How to Run
+## 🚀 How to Run
 
 1. Clone the repository
 
@@ -77,7 +77,7 @@ pip install deep-translator requests pyttsx3 SpeechRecognition sounddevice gTTS 
 
 python app.py
 
-💡 How It Works
+## 💡 How It Works
 
 1. Select the source language.
 2. Select the target language.
@@ -88,10 +88,10 @@ python app.py
 7. Use Speak to hear the translated text.
 8. Previous translations are saved in the translation history.
 
-🎯 Project Objective
+## 🎯 Project Objective
 
 The main objective of this project is to create a simple and user-friendly translation application that combines text translation, speech recognition, text-to-speech, and translation history in one desktop application.
 
-👩‍💻 Developed By
+## 👩‍💻 Developed By
 
 Angelin Belinda A
