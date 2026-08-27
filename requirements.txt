@@ -1,0 +1,5 @@
+deep-translator
+SpeechRecognition
+sounddevice
+gTTS
+playsound3

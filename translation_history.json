@@ -1,6 +1,60 @@
 [
     {
         "source": "English",
+        "target": "Malayalam",
+        "original": "hello this is Angelin Belinda",
+        "translation": "ഹലോ ഇതാണ് ആഞ്ജലിൻ ബെലിൻഡ"
+    },
+    {
+        "source": "English",
+        "target": "Malayalam",
+        "original": "Did you eat",
+        "translation": "നീ ഭക്ഷണം കഴിച്ചോ"
+    },
+    {
+        "source": "English",
+        "target": "Telugu",
+        "original": "Did you eat",
+        "translation": "నువ్వు తిన్నావా"
+    },
+    {
+        "source": "English",
+        "target": "Tamil",
+        "original": "Did you eat",
+        "translation": "சாப்பிட்டியா"
+    },
+    {
+        "source": "English",
+        "target": "Telugu",
+        "original": "These are my teammates",
+        "translation": "వీరు నా సహచరులు"
+    },
+    {
+        "source": "English",
+        "target": "Malayalam",
+        "original": "These are my teammates",
+        "translation": "ഇവർ എൻ്റെ ടീമംഗങ്ങളാണ്"
+    },
+    {
+        "source": "English",
+        "target": "Tamil",
+        "original": "These are my teammates",
+        "translation": "இவர்கள் எனது அணியினர்"
+    },
+    {
+        "source": "English",
+        "target": "Punjabi",
+        "original": "How are you",
+        "translation": "ਤੁਸੀ ਕਿਵੇਂ ਹੋ"
+    },
+    {
+        "source": "English",
+        "target": "Tamil",
+        "original": "How are you",
+        "translation": "எப்படி இருக்கிறீர்கள்"
+    },
+    {
+        "source": "English",
         "target": "Tamil",
         "original": "she was writing",
         "translation": "அவள் எழுதிக் கொண்டிருந்தாள்"
