@@ -5,7 +5,7 @@ import json
 import os
 import threading
 import tempfile
-
+import time
 import speech_recognition as sr
 import sounddevice as sd
 from gtts import gTTS
@@ -168,40 +168,52 @@ def translate_text(
     target_code
 ):
 
-    try:
+    max_retries = 3
 
-        translator = GoogleTranslator(
-            source=source_code,
-            target=target_code
-        )
+    for attempt in range(max_retries):
 
-        translated = translator.translate(text)
+        try:
 
-        if not translated:
-            raise Exception(
-                "No translation was received."
+            translator = GoogleTranslator(
+                source=source_code,
+                target=target_code
             )
 
-        # Return result to main Tkinter thread
-        window.after(
-            0,
-            lambda: translation_success(
-                text,
-                source,
-                target,
-                translated
+            translated = translator.translate(text)
+
+            if not translated:
+                raise Exception(
+                    "No translation was received."
+                )
+
+            # Return result to main Tkinter thread
+            window.after(
+                0,
+                lambda: translation_success(
+                    text,
+                    source,
+                    target,
+                    translated
+                )
             )
-        )
 
-    except Exception as error:
+            return
 
-        window.after(
-            0,
-            lambda: translation_failed(
-                str(error)
-            )
-        )
+        except Exception as error:
 
+            # If this was not the final attempt,
+            # wait briefly and try again
+            if attempt < max_retries - 1:
+
+                time.sleep(1)
+
+            else:
+
+                # All 3 attempts failed
+                window.after(
+                    0,
+                    lambda e=str(error): translation_failed(e)
+                )
 
 # =========================================================
 # TRANSLATION SUCCESS
