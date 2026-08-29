@@ -112,7 +112,6 @@ def start_translation():
         )
         return
 
-    # Same language
     if source == target:
 
         output_text.delete("1.0", tk.END)
@@ -140,7 +139,6 @@ def start_translation():
         tk.END
     )
 
-    # Run translation in background
     thread = threading.Thread(
         target=translate_text,
         args=(
@@ -169,10 +167,21 @@ def translate_text(
 ):
 
     max_retries = 3
+    last_error = "Unknown translation error."
 
     for attempt in range(max_retries):
 
         try:
+
+            if attempt > 0:
+                window.after(
+                    0,
+                    lambda n=attempt + 1: status_label.config(
+                        text=f"⏳ Retrying translation... (Attempt {n}/{max_retries})"
+                    )
+                )
+
+                time.sleep(1)
 
             translator = GoogleTranslator(
                 source=source_code,
@@ -186,7 +195,6 @@ def translate_text(
                     "No translation was received."
                 )
 
-            # Return result to main Tkinter thread
             window.after(
                 0,
                 lambda: translation_success(
@@ -200,20 +208,13 @@ def translate_text(
             return
 
         except Exception as error:
+            last_error = str(error)
 
-            # If this was not the final attempt,
-            # wait briefly and try again
-            if attempt < max_retries - 1:
+    window.after(
+        0,
+        lambda e=last_error: translation_failed(e)
+    )
 
-                time.sleep(1)
-
-            else:
-
-                # All 3 attempts failed
-                window.after(
-                    0,
-                    lambda e=str(error): translation_failed(e)
-                )
 
 # =========================================================
 # TRANSLATION SUCCESS
@@ -236,7 +237,6 @@ def translation_success(
         translated
     )
 
-    # Add to history
     history.insert(
         0,
         {
@@ -247,7 +247,6 @@ def translation_success(
         }
     )
 
-    # Keep latest 50 translations
     del history[50:]
 
     save_history()
@@ -428,7 +427,6 @@ def speak_text(text, target, target_code):
 
     try:
 
-        # Create temporary MP3 file
         temp_file = tempfile.NamedTemporaryFile(
             delete=False,
             suffix=".mp3"
@@ -463,9 +461,7 @@ def speak_text(text, target, target_code):
 
         window.after(
             0,
-            lambda: speech_failed(
-                str(error)
-            )
+            lambda: speech_failed(str(error))
         )
 
     finally:
@@ -536,7 +532,6 @@ def record_voice():
         sample_rate = 16000
         duration = 5
 
-        # Record microphone
         recording = sd.rec(
             int(duration * sample_rate),
             samplerate=sample_rate,
@@ -621,9 +616,7 @@ def record_voice():
 
         window.after(
             0,
-            lambda: voice_error(
-                str(error)
-            )
+            lambda: voice_error(str(error))
         )
 
 
@@ -758,27 +751,278 @@ TEXT_COLOR = "#1E1B4B"
 MUTED_COLOR = "#64748B"
 
 
+DAY_THEME = {
+    "bg": "#EEF2FF",
+    "card": "#FFFFFF",
+    "text": "#1E1B4B",
+    "muted": "#64748B",
+    "input": "#FFFFFF",
+    "history": "#F8FAFC",
+    "select": "#4F46E5"
+}
+
+
+NIGHT_THEME = {
+    "bg": "#111827",
+    "card": "#1F2937",
+    "text": "#FFFFFF",
+    "muted": "#E2E8F0",
+    "input": "#273449",
+    "history": "#273449",
+    "select": "#6366F1"
+}
+
+
+night_mode = False
+
 window.configure(
     bg=BG_COLOR
 )
 
 
 # =========================================================
-# TITLE
+# DAY / NIGHT THEME
 # =========================================================
 
-title = tk.Label(
+def toggle_theme():
+
+    global night_mode
+
+    night_mode = not night_mode
+
+    theme = NIGHT_THEME if night_mode else DAY_THEME
+
+    window.configure(
+        bg=theme["bg"]
+    )
+
+    header_frame.configure(
+        bg=theme["bg"]
+    )
+
+    language_frame.configure(
+        bg=theme["bg"]
+    )
+
+    text_frame.configure(
+        bg=theme["bg"]
+    )
+
+    button_frame.configure(
+        bg=theme["bg"]
+    )
+
+    title.configure(
+        bg=theme["bg"],
+        fg=theme["text"]
+    )
+
+    globe.configure(
+        bg=theme["bg"],
+        fg=theme["text"]
+    )
+
+    subtitle.configure(
+        bg=theme["bg"],
+        fg=theme["muted"]
+    )
+
+    status_label.configure(
+        bg=theme["bg"],
+        fg=SUCCESS_COLOR
+    )
+
+    for child in language_frame.winfo_children():
+
+        if isinstance(child, tk.Label):
+
+            child.configure(
+                bg=theme["bg"],
+                fg=theme["text"]
+            )
+
+    swap_button.configure(
+        bg=theme["card"],
+        fg=theme["text"],
+        activebackground=theme["input"],
+        activeforeground=theme["text"]
+    )
+
+    for card in (
+        input_frame,
+        output_frame,
+        history_frame
+    ):
+
+        card.configure(
+            bg=theme["card"],
+            fg=theme["text"]
+        )
+
+    input_text.configure(
+        bg=theme["input"],
+        fg=theme["text"],
+        insertbackground=theme["text"]
+    )
+
+    output_text.configure(
+        bg=theme["input"],
+        fg=theme["text"],
+        insertbackground=theme["text"]
+    )
+
+    history_list.configure(
+        bg=theme["history"],
+        fg=theme["text"],
+        selectbackground=theme["select"],
+        selectforeground="white"
+    )
+
+    theme_button.configure(
+        text="☀️ Day Mode" if night_mode else "🌙 Night Mode",
+        bg=SECONDARY_COLOR,
+        fg="white",
+        activebackground=SECONDARY_DARK,
+        activeforeground="white"
+    )
+
+    style = ttk.Style(window)
+
+    try:
+        style.theme_use("clam")
+    except tk.TclError:
+        pass
+
+    style.configure(
+        "Theme.TCombobox",
+        fieldbackground=theme["input"],
+        background=theme["input"],
+        foreground=theme["text"],
+        arrowcolor=theme["text"]
+    )
+
+    style.map(
+        "Theme.TCombobox",
+        fieldbackground=[
+            ("readonly", theme["input"])
+        ],
+        foreground=[
+            ("readonly", theme["text"])
+        ],
+        selectbackground=[
+            ("readonly", theme["select"])
+        ],
+        selectforeground=[
+            ("readonly", "white")
+        ]
+    )
+
+    source_language.configure(
+        style="Theme.TCombobox"
+    )
+
+    target_language.configure(
+        style="Theme.TCombobox"
+    )
+
+
+# =========================================================
+# HEADER
+# =========================================================
+
+header_frame = tk.Frame(
     window,
-    text="🌐 AI LANGUAGE TRANSLATOR",
-    font=("Arial", 24, "bold"),
+    bg=BG_COLOR,
+    height=75
+)
+
+header_frame.pack(
+    fill="x",
+    padx=20,
+    pady=(5, 0)
+)
+
+header_frame.pack_propagate(False)
+
+
+# =========================================================
+# CENTER TITLE
+# =========================================================
+# THIS IS THE IMPORTANT CHANGE
+# The title is positioned at the exact center of the window.
+
+title_frame = tk.Frame(
+    header_frame,
+    bg=BG_COLOR
+)
+
+title_frame.place(
+    relx=0.5,
+    y=15,
+    anchor="n"
+)
+
+
+globe = tk.Label(
+    title_frame,
+    text="🌐",
+    font=("Arial", 24),
     bg=BG_COLOR,
     fg=TEXT_COLOR
 )
 
-title.pack(
-    pady=(20, 5)
+globe.pack(
+    side="left",
+    padx=(0, 8)
 )
 
+
+title = tk.Label(
+    title_frame,
+    text="AI LANGUAGE TRANSLATOR",
+    font=("Arial", 24, "bold"),
+    bg=BG_COLOR,
+    fg=TEXT_COLOR,
+    borderwidth=0,
+    highlightthickness=1
+)
+
+
+title.pack(
+    side="left"
+)
+
+
+# =========================================================
+# NIGHT MODE BUTTON
+# =========================================================
+
+theme_button = tk.Button(
+    header_frame,
+    text="🌙 Night Mode",
+    command=toggle_theme,
+    font=("Arial", 10, "bold"),
+    bg=SECONDARY_COLOR,
+    fg="white",
+    activebackground=SECONDARY_DARK,
+    activeforeground="white",
+    relief="flat",
+    padx=12,
+    pady=6,
+    cursor="hand2"
+)
+
+theme_button.place(
+    relx=1.0,
+    x=-5,
+    y=15,
+    anchor="ne"
+)
+
+
+# =========================================================
+# SUBTITLE
+# =========================================================
 
 subtitle = tk.Label(
     window,

@@ -1,6 +1,252 @@
 [
     {
         "source": "English",
+        "target": "Tamil",
+        "original": "How are you",
+        "translation": "எப்படி இருக்கிறீர்கள்"
+    },
+    {
+        "source": "English",
+        "target": "Tamil",
+        "original": "Hello",
+        "translation": "வணக்கம்"
+    },
+    {
+        "source": "German",
+        "target": "English",
+        "original": "ich bin Angelina",
+        "translation": "I'm Angelina"
+    },
+    {
+        "source": "English",
+        "target": "German",
+        "original": "good morning everyone have a nice day",
+        "translation": "Guten Morgen, euch allen einen schönen Tag"
+    },
+    {
+        "source": "English",
+        "target": "Hindi",
+        "original": "good morning everyone have a nice day",
+        "translation": "सुप्रभात सबके लिए अच्छा हो"
+    },
+    {
+        "source": "English",
+        "target": "Hindi",
+        "original": "Good morning , Have a nice day",
+        "translation": "शुभ प्रभात आपका दिन शुभ हो"
+    },
+    {
+        "source": "English",
+        "target": "Tamil",
+        "original": "Good morning , Have a nice day",
+        "translation": "காலை வணக்கம், இனிய நாள்"
+    },
+    {
+        "source": "English",
+        "target": "Tamil",
+        "original": "Hello",
+        "translation": "வணக்கம்"
+    },
+    {
+        "source": "English",
+        "target": "Tamil",
+        "original": "good morning have a nice day",
+        "translation": "காலை வணக்கம் இனிய நாளாக அமையட்டும்"
+    },
+    {
+        "source": "English",
+        "target": "Malayalam",
+        "original": "good morning have a nice day",
+        "translation": "സുപ്രഭാതം ശുഭദിനം നേരുന്നു"
+    },
+    {
+        "source": "English",
+        "target": "Malayalam",
+        "original": "Good morning",
+        "translation": "സുപ്രഭാതം"
+    },
+    {
+        "source": "German",
+        "target": "English",
+        "original": "Wasser",
+        "translation": "Water"
+    },
+    {
+        "source": "English",
+        "target": "Tamil",
+        "original": "Hello, How are you?",
+        "translation": "வணக்கம், நலமா?"
+    },
+    {
+        "source": "English",
+        "target": "Malayalam",
+        "original": "my friend is an idiot",
+        "translation": "എൻ്റെ സുഹൃത്ത് ഒരു വിഡ്ഢിയാണ്"
+    },
+    {
+        "source": "English",
+        "target": "Tamil",
+        "original": "my friend is an idiot",
+        "translation": "என் நண்பன் ஒரு முட்டாள்"
+    },
+    {
+        "source": "English",
+        "target": "Tamil",
+        "original": "a friend oru loosu",
+        "translation": "ஒரு நண்பர் oru loosu"
+    },
+    {
+        "source": "English",
+        "target": "Tamil",
+        "original": "My name is idiot",
+        "translation": "என் பெயர் முட்டாள்"
+    },
+    {
+        "source": "English",
+        "target": "Tamil",
+        "original": "how are you",
+        "translation": "எப்படி இருக்கிறீர்கள்"
+    },
+    {
+        "source": "English",
+        "target": "German",
+        "original": "how are you",
+        "translation": "Wie geht es dir"
+    },
+    {
+        "source": "English",
+        "target": "German",
+        "original": "Good morning",
+        "translation": "Guten Morgen"
+    },
+    {
+        "source": "English",
+        "target": "Tamil",
+        "original": "Good morning",
+        "translation": "காலை வணக்கம்"
+    },
+    {
+        "source": "English",
+        "target": "Tamil",
+        "original": "Hello, How are you?",
+        "translation": "வணக்கம், நலமா?"
+    },
+    {
+        "source": "English",
+        "target": "German",
+        "original": "how are you",
+        "translation": "Wie geht es dir"
+    },
+    {
+        "source": "English",
+        "target": "German",
+        "original": "Wasser",
+        "translation": "Wasser"
+    },
+    {
+        "source": "English",
+        "target": "Tamil",
+        "original": "How are You?",
+        "translation": "எப்படி இருக்கிறீர்கள்?"
+    },
+    {
+        "source": "English",
+        "target": "Tamil",
+        "original": "Hello",
+        "translation": "வணக்கம்"
+    },
+    {
+        "source": "English",
+        "target": "Tamil",
+        "original": "how are you",
+        "translation": "எப்படி இருக்கிறீர்கள்"
+    },
+    {
+        "source": "English",
+        "target": "German",
+        "original": "how are you",
+        "translation": "Wie geht es dir"
+    },
+    {
+        "source": "English",
+        "target": "German",
+        "original": "washer",
+        "translation": "Waschmaschine"
+    },
+    {
+        "source": "English",
+        "target": "German",
+        "original": "My name is Angelin",
+        "translation": "Mein Name ist Angelin"
+    },
+    {
+        "source": "English",
+        "target": "Tamil",
+        "original": "How are You",
+        "translation": "எப்படி இருக்கிறீர்கள்"
+    },
+    {
+        "source": "English",
+        "target": "Tamil",
+        "original": "Apple",
+        "translation": "ஆப்பிள்"
+    },
+    {
+        "source": "English",
+        "target": "Tamil",
+        "original": "Hello",
+        "translation": "வணக்கம்"
+    },
+    {
+        "source": "English",
+        "target": "Tamil",
+        "original": "Hello",
+        "translation": "வணக்கம்"
+    },
+    {
+        "source": "English",
+        "target": "Kannada",
+        "original": "Hello",
+        "translation": "ನಮಸ್ಕಾರ"
+    },
+    {
+        "source": "English",
+        "target": "Kannada",
+        "original": "Hello",
+        "translation": "ನಮಸ್ಕಾರ"
+    },
+    {
+        "source": "English",
+        "target": "Tamil",
+        "original": "Hello",
+        "translation": "வணக்கம்"
+    },
+    {
+        "source": "English",
+        "target": "Tamil",
+        "original": "test this app",
+        "translation": "இந்த பயன்பாட்டை சோதிக்கவும்"
+    },
+    {
+        "source": "English",
+        "target": "Malayalam",
+        "original": "test this app",
+        "translation": "ഈ ആപ്പ് പരീക്ഷിക്കുക"
+    },
+    {
+        "source": "English",
+        "target": "Tamil",
+        "original": "test this app",
+        "translation": "இந்த பயன்பாட்டை சோதிக்கவும்"
+    },
+    {
+        "source": "English",
+        "target": "Tamil",
+        "original": "Validate",
+        "translation": "சரிபார்க்கவும்"
+    },
+    {
+        "source": "English",
         "target": "Malayalam",
         "original": "hello this is Angelin Belinda",
         "translation": "ഹലോ ഇതാണ് ആഞ്ജലിൻ ബെലിൻഡ"
@@ -52,233 +298,5 @@
         "target": "Tamil",
         "original": "How are you",
         "translation": "எப்படி இருக்கிறீர்கள்"
-    },
-    {
-        "source": "English",
-        "target": "Tamil",
-        "original": "she was writing",
-        "translation": "அவள் எழுதிக் கொண்டிருந்தாள்"
-    },
-    {
-        "source": "English",
-        "target": "Tamil",
-        "original": "She was sleeping",
-        "translation": "அவள் தூங்கிக் கொண்டிருந்தாள்"
-    },
-    {
-        "source": "German",
-        "target": "English",
-        "original": "Mein papa ist leherin",
-        "translation": "My dad is a teacher"
-    },
-    {
-        "source": "English",
-        "target": "Tamil",
-        "original": "Hello",
-        "translation": "வணக்கம்"
-    },
-    {
-        "source": "German",
-        "target": "English",
-        "original": "wasser",
-        "translation": "Water"
-    },
-    {
-        "source": "German",
-        "target": "English",
-        "original": "Milch",
-        "translation": "Milk"
-    },
-    {
-        "source": "German",
-        "target": "English",
-        "original": "Freut mich",
-        "translation": "I'm pleased"
-    },
-    {
-        "source": "English",
-        "target": "German",
-        "original": "My name is Angelin",
-        "translation": "Mein Name ist Angelin"
-    },
-    {
-        "source": "English",
-        "target": "Hindi",
-        "original": "My name is Angelin",
-        "translation": "मेरा नाम एंजेलिन है"
-    },
-    {
-        "source": "English",
-        "target": "Tamil",
-        "original": "My name is Angelin",
-        "translation": "என் பெயர் ஏஞ்சலின்"
-    },
-    {
-        "source": "English",
-        "target": "Tamil",
-        "original": "Hello",
-        "translation": "வணக்கம்"
-    },
-    {
-        "source": "English",
-        "target": "Tamil",
-        "original": "My name is Angelin",
-        "translation": "என் பெயர் ஏஞ்சலின்"
-    },
-    {
-        "source": "English",
-        "target": "Tamil",
-        "original": "hello",
-        "translation": "ஒரு ஒத்திசைவான ஒருங்கிணைந்த வாக்கியத்தை உருவாக்குங்கள்"
-    },
-    {
-        "source": "English",
-        "target": "Tamil",
-        "original": "How are You",
-        "translation": "enna solare"
-    },
-    {
-        "source": "English",
-        "target": "Tamil",
-        "original": "How are you",
-        "translation": "எப்படி இருக்கிறீர்கள்"
-    },
-    {
-        "source": "English",
-        "target": "Tamil",
-        "original": "How are you",
-        "translation": "எப்படி இருக்கிறீர்கள்"
-    },
-    {
-        "source": "English",
-        "target": "Tamil",
-        "original": "Hello",
-        "translation": "வணக்கம்"
-    },
-    {
-        "source": "English",
-        "target": "Tamil",
-        "original": "Hello",
-        "translation": "Nuvvu vishes cheppavuga andhuke same to you annanu"
-    },
-    {
-        "source": "English",
-        "target": "Tamil",
-        "original": "Hello",
-        "translation": "வணக்கம்"
-    },
-    {
-        "source": "English",
-        "target": "Tamil",
-        "original": "Hello",
-        "translation": "வணக்கம்"
-    },
-    {
-        "source": "English",
-        "target": "Tamil",
-        "original": "Hello",
-        "translation": "Nuvvu vishes cheppavuga andhuke same to you annanu"
-    },
-    {
-        "source": "English",
-        "target": "Tamil",
-        "original": "Hello",
-        "translation": "Nuvvu vishes cheppavuga andhuke same to you annanu"
-    },
-    {
-        "source": "English",
-        "target": "Tamil",
-        "original": "Hello",
-        "translation": "Nuvvu vishes cheppavuga andhuke same to you annanu"
-    },
-    {
-        "source": "English",
-        "target": "Tamil",
-        "original": "that's so cool it is very nice",
-        "translation": "அது மிகவும் அருமையாக இருக்கிறது"
-    },
-    {
-        "source": "English",
-        "target": "Tamil",
-        "original": "Hello, Friend!!",
-        "translation": "வணக்கம் நண்பரே!!"
-    },
-    {
-        "source": "German",
-        "target": "English",
-        "original": "ich bin Angelina Belinda",
-        "translation": "I'm Angelina Belinda"
-    },
-    {
-        "source": "English",
-        "target": "Tamil",
-        "original": "who are you",
-        "translation": "நீங்கள் யார்"
-    },
-    {
-        "source": "German",
-        "target": "English",
-        "original": "Mein papa ist leherin",
-        "translation": "My dad is a teacher"
-    },
-    {
-        "source": "German",
-        "target": "English",
-        "original": "Wandert deine tochter oft?",
-        "translation": "Does your daughter often hike?"
-    },
-    {
-        "source": "German",
-        "target": "English",
-        "original": "gut und frish",
-        "translation": "good and fresh"
-    },
-    {
-        "source": "German",
-        "target": "English",
-        "original": "Ich komme aus Chennai",
-        "translation": "I am from Chennai"
-    },
-    {
-        "source": "English",
-        "target": "Tamil",
-        "original": "Hello",
-        "translation": "வணக்கம்"
-    },
-    {
-        "source": "English",
-        "target": "Tamil",
-        "original": "how are you",
-        "translation": "எப்படி இருக்கிறீர்கள்"
-    },
-    {
-        "source": "English",
-        "target": "German",
-        "original": "I come from Chennai",
-        "translation": "Ich komme aus Chennai"
-    },
-    {
-        "source": "English",
-        "target": "German",
-        "original": "My name is Angelin",
-        "translation": "Mein Name ist Angelin"
-    },
-    {
-        "source": "English",
-        "target": "Tamil",
-        "original": "I Love You",
-        "translation": "ஐ லவ் யூ"
-    },
-    {
-        "source": "English",
-        "target": "Tamil",
-        "original": "Objects are created",
-        "translation": "பொருள்கள் உருவாக்கப்படுகின்றன"
-    },
-    {
-        "source": "English",
-        "target": "Tamil",
-        "original": "How are you?",
-        "translation": "எப்படி இருக்கிறீர்கள்?"
     }
 ]
